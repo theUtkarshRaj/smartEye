@@ -1,0 +1,65 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  max-width: 1920px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.error-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  text-align: center;
+  padding: 40px;
+}
+
+.error-state h2 {
+  color: #ef4444;
+  margin-bottom: 16px;
+  font-size: 24px;
+}
+
+.error-state p {
+  color: #94a3b8;
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.server-url {
+  font-family: monospace;
+  background: #1e293b;
+  padding: 8px 16px;
+  border-radius: 6px;
+  margin: 16px 0;
+}
+
+.retry-button {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 16px;
+  transition: background 0.2s;
+}
+
+.retry-button:hover {
+  background: #2563eb;
+}
+
+.retry-button:active {
+  background: #1d4ed8;
+}
+

@@ -1,0 +1,26 @@
+# Core Dependencies
+ultralytics>=8.0.0
+opencv-python>=4.8.0
+numpy>=1.24.0
+pillow>=10.0.0
+
+# API Framework
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+websockets>=12.0
+pydantic>=2.5.0
+httpx>=0.25.0
+
+# Utilities
+python-multipart>=0.0.6
+aiofiles>=23.2.0
+pyyaml>=6.0.1
+
+# Performance & Monitoring
+psutil>=5.9.0
+
+# Optional GPU Support
+# torch>=2.0.0  # Uncomment if using PyTorch backend
+# onnxruntime-gpu>=1.16.0  # Uncomment for ONNX GPU inference
+
+

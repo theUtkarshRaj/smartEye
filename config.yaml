@@ -1,0 +1,52 @@
+# SmartEye Configuration File
+
+# Server Configuration
+server:
+  host: "0.0.0.0"
+  port: 8000
+  workers: 1  # Number of uvicorn workers (for production)
+  reload: false  # Auto-reload on code changes (development only)
+
+# Model Configuration
+model:
+  path: "yolov8n.pt"  # Model file path (yolov8n.pt, yolov8s.pt, etc.)
+  device: null  # null = auto-detect, "cpu", "cuda:0", etc.
+  conf_threshold: 0.25  # Confidence threshold for detections
+  iou_threshold: 0.45  # IoU threshold for NMS
+  max_detections: 100  # Maximum detections per frame
+
+# Client Configuration
+client:
+  server_url: "http://localhost:8000"
+  timeout: 30.0  # Request timeout in seconds
+  max_retries: 3  # Maximum retry attempts
+  retry_delay: 1.0  # Initial retry delay in seconds
+  output_dir: "results"  # Output directory for JSON results
+
+# Performance Configuration
+performance:
+  fps_limit: null  # Maximum FPS to process (null = no limit)
+  frame_skip: 0  # Skip every N frames (0 = no skipping)
+  buffer_size: 1  # OpenCV buffer size (1 = minimal latency)
+
+# Logging Configuration
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR, CRITICAL
+  file: true  # Enable file logging
+  console: true  # Enable console logging
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+
+# Stream Configuration (example)
+streams:
+  - name: "webcam_0"
+    source: "0"
+    source_type: "webcam"
+    fps_limit: 30
+    frame_skip: 0
+  
+  - name: "rtsp_camera_1"
+    source: "rtsp://username:password@192.168.1.100:554/stream"
+    source_type: "rtsp"
+    fps_limit: 15
+    frame_skip: 0
+
