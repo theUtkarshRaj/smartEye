@@ -20,7 +20,7 @@ A lightweight, cross-platform Video Management System (VMS) with real-time AI-po
 
 The SmartEye dashboard provides a comprehensive interface for managing video streams, monitoring performance, and viewing real-time detection results.
 
-![Dashboard Overview](images/dashboard-overview.png)
+![Dashboard Overview](images/dashboard_smartEye.png)
 
 The dashboard includes:
 - **Stream Manager**: Add, configure, start, stop, and delete video streams
@@ -28,7 +28,7 @@ The dashboard includes:
 - **Detection Results**: View real-time object detection with bounding boxes
 - **Performance Analytics**: Visual charts showing system performance over time
 
-![Dashboard Features](images/dashboard-features.png)
+![Dashboard Features](images/feature.png)
 
 ### Dashboard Components
 
